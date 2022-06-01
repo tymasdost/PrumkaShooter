@@ -81,6 +81,7 @@ const Collisions = () => {
                 entit.y + entit.size.height > ammo.y
         
             ) {
+                Explode(ammo.x, ammo.y);
                 enemy.splice(eI, 1)
                 bullet.splice(bI, 1)
                 score += 50;
@@ -89,6 +90,14 @@ const Collisions = () => {
 
         });
     });
+}
+
+const Explode = (x,y)=> {
+    let myGif = new Image();
+    myGif.src = "./res/img/bum.gif";
+    ctx.drawImage(myGif, x - 30, y - 30, 60, 60)
+    
+    
 }
 
 const Score = () => {
