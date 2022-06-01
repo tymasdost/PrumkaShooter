@@ -51,6 +51,9 @@ setInterval(()=>{
 const resizeCanvas = () => {
     canvas.width = 500;
     canvas.height = 700;
+    let bg = new Image();
+    bg.src = "./res/img/his.jpg";
+    ctx.drawImage(bg, 0, 0, canvas.width, canvas.height)
 };
 
 
